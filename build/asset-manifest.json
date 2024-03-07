@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a92342e9.chunk.css",
+    "main.js": "/static/js/main.ed7f467d.chunk.js",
+    "main.js.map": "/static/js/main.ed7f467d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.52b8e694.js",
+    "runtime-main.js.map": "/static/js/runtime-main.52b8e694.js.map",
+    "static/css/2.0b428a6b.chunk.css": "/static/css/2.0b428a6b.chunk.css",
+    "static/js/2.2a352833.chunk.js": "/static/js/2.2a352833.chunk.js",
+    "static/js/2.2a352833.chunk.js.map": "/static/js/2.2a352833.chunk.js.map",
+    "static/js/3.26b843f0.chunk.js": "/static/js/3.26b843f0.chunk.js",
+    "static/js/3.26b843f0.chunk.js.map": "/static/js/3.26b843f0.chunk.js.map",
+    "static/js/4.00a4c3fa.chunk.js": "/static/js/4.00a4c3fa.chunk.js",
+    "static/js/4.00a4c3fa.chunk.js.map": "/static/js/4.00a4c3fa.chunk.js.map",
+    "static/js/5.2f0746d4.chunk.js": "/static/js/5.2f0746d4.chunk.js",
+    "static/js/5.2f0746d4.chunk.js.map": "/static/js/5.2f0746d4.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.0b428a6b.chunk.css.map": "/static/css/2.0b428a6b.chunk.css.map",
+    "static/css/main.a92342e9.chunk.css.map": "/static/css/main.a92342e9.chunk.css.map",
+    "static/js/2.2a352833.chunk.js.LICENSE.txt": "/static/js/2.2a352833.chunk.js.LICENSE.txt",
+    "static/js/3.26b843f0.chunk.js.LICENSE.txt": "/static/js/3.26b843f0.chunk.js.LICENSE.txt",
+    "static/js/4.00a4c3fa.chunk.js.LICENSE.txt": "/static/js/4.00a4c3fa.chunk.js.LICENSE.txt",
+    "static/js/5.2f0746d4.chunk.js.LICENSE.txt": "/static/js/5.2f0746d4.chunk.js.LICENSE.txt",
+    "static/media/Sidebar.css": "/static/media/DashboardObjectAdmin.e6ea8485.png",
+    "static/media/Login.css": "/static/media/FLATiMAGE.e42bb2ca.jpeg",
+    "static/media/LOGINBACK.f8757d26.svg": "/static/media/LOGINBACK.f8757d26.svg",
+    "static/media/employe.be3300aa.bmp": "/static/media/employe.be3300aa.bmp",
+    "static/media/DashboardAdmin.css": "/static/media/pattern.5a11f8c7.png",
+    "static/media/DashboardHR.css": "/static/media/texturetech.47897e30.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.52b8e694.js",
+    "static/css/2.0b428a6b.chunk.css",
+    "static/js/2.2a352833.chunk.js",
+    "static/css/main.a92342e9.chunk.css",
+    "static/js/main.ed7f467d.chunk.js"
+  ]
+}

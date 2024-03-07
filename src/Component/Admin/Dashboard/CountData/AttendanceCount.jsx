@@ -14,7 +14,7 @@ function AttendanceDashboard() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4000/api/attendance"
+          `https://backend-1-6gm4.onrender.com/api/attendance`
         ); // Adjust the API endpoint accordingly
 
         const data = response.data;

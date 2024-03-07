@@ -59,7 +59,7 @@ class State extends Component {
     //  let body= "CompanyID=" + event.target[0].value + "&State=" + event.target[1].value;
     //  let body= "debru";
     axios
-      .post("http://localhost:4000/api/state", body, {
+      .post(`https://backend-1-6gm4.onrender.com/api/state`, body, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }
@@ -106,7 +106,7 @@ class State extends Component {
     };
     console.log("update", body);
     axios
-      .put("http://localhost:4000/api/state/" + info["_id"], body, {
+      .put(`https://backend-1-6gm4.onrender.com/api/state/` + info["_id"], body, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }

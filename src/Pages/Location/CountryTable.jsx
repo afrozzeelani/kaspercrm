@@ -65,7 +65,7 @@ class CountryTable extends Component {
   // countryDataArray;
   loadCountryData = () => {
     axios
-      .get("http://localhost:4000/api/country", {
+      .get(`https://backend-1-6gm4.onrender.com/api/country`, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }
@@ -100,7 +100,7 @@ class CountryTable extends Component {
     // let body= "ID=" + e;
     if (window.confirm("Are you sure to delete this record ? ") == true) {
       axios
-        .delete("http://localhost:4000/api/country/" + e, {
+        .delete(`https://backend-1-6gm4.onrender.com/api/country/` + e, {
           headers: {
             authorization: localStorage.getItem("token") || ""
           }

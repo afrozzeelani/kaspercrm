@@ -41,7 +41,7 @@ const EmployeeActiveTask = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/api/tasks");
+      const response = await axios.get(`https://backend-1-6gm4.onrender.com/api/tasks`);
       setTasks(response.data);
     } catch (error) {
       console.error("Error fetching tasks:", error.message);
@@ -75,7 +75,7 @@ const EmployeeActiveTask = () => {
       }
 
       // Update the task status to "Cancelled" in the database
-      await axios.put(`http://localhost:4000/api/tasks/${taskId}`, {
+      await axios.put(`https://backend-1-6gm4.onrender.com/api/tasks/${taskId}`, {
         status: "Pending",
         comment: cancellationRemarks
       });
@@ -102,7 +102,7 @@ const EmployeeActiveTask = () => {
         return;
       }
 
-      await axios.put(`http://localhost:4000/api/tasks/${taskId}`, {
+      await axios.put(`https://backend-1-6gm4.onrender.com/api/tasks/${taskId}`, {
         status: "Rejected",
         comment: RejectRemarks
       });
@@ -131,7 +131,7 @@ const EmployeeActiveTask = () => {
       }
 
       // Update the task status to "Cancelled" in the database
-      await axios.put(`http://localhost:4000/api/tasks/${taskId}`, {
+      await axios.put(`https://backend-1-6gm4.onrender.com/api/tasks/${taskId}`, {
         status: "Completed",
         comment: CompleteRemarks
       });

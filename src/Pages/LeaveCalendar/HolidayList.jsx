@@ -13,7 +13,7 @@ function HolidayList() {
     // Fetch holiday data when the component mounts
     const fetchHolidays = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/api/holidays");
+        const response = await axios.get(`https://backend-1-6gm4.onrender.com/api/holidays`);
 
         if (response.status === 200) {
           const data = response.data;

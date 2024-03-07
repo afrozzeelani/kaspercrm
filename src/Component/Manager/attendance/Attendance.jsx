@@ -225,7 +225,7 @@ function SetLog(props) {
   useEffect(() => {
     const loadEmployeeData = async (email) => {
       await axios
-        .get("http://localhost:4000/api/employee", {
+        .get(`https://backend-1-6gm4.onrender.com/api/employee`, {
           headers: {
             authorization: localStorage.getItem("token") || ""
           }
@@ -249,7 +249,7 @@ function SetLog(props) {
     const loadPersonalInfoData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4000/api/personal-info/" + props.data["_id"],
+          `https://backend-1-6gm4.onrender.com/api/personal-info/` + props.data["_id"],
           {
             headers: {
               authorization: localStorage.getItem("token") || ""
@@ -282,7 +282,7 @@ function SetLog(props) {
   const getMessage = async (employeeID) => {
     try {
       const response = await axios.get(
-        `http://localhost:4000/api/attendance/${employeeID}`
+        `https://backend-1-6gm4.onrender.com/api/attendance/${employeeID}`
       );
       const lastEntry = response.data[response.data.length - 1];
 
@@ -311,7 +311,7 @@ function SetLog(props) {
       }
 
       const currentTime = new Date().toLocaleTimeString();
-      await axios.post(`http://localhost:4000/api/attendance/${attencenceID}`, {
+      await axios.post(`https://backend-1-6gm4.onrender.com/api/attendance/${attencenceID}`, {
         employeeId: selectedEmployee,
         year: new Date().getFullYear(),
         month: new Date().getMonth() + 1,
@@ -339,7 +339,7 @@ function SetLog(props) {
       }
 
       const currentTime = new Date().toLocaleTimeString();
-      await axios.post(`http://localhost:4000/api/attendance/${attencenceID}`, {
+      await axios.post(`https://backend-1-6gm4.onrender.com/api/attendance/${attencenceID}`, {
         employeeId: selectedEmployee,
         year: new Date().getFullYear(),
         month: new Date().getMonth() + 1,
@@ -372,7 +372,7 @@ function SetLog(props) {
         const currentTimeMs = Math.round(new Date().getTime() / 1000 / 60);
 
         await axios.post(
-          `http://localhost:4000/api/attendance/${attencenceID}`,
+          `https://backend-1-6gm4.onrender.com/api/attendance/${attencenceID}`,
           {
             employeeId: selectedEmployee,
             year: new Date().getFullYear(),
@@ -411,7 +411,7 @@ function SetLog(props) {
         const currentTimeMs = Math.round(new Date().getTime() / 1000 / 60);
 
         await axios.post(
-          `http://localhost:4000/api/attendance/${attencenceID}`,
+          `https://backend-1-6gm4.onrender.com/api/attendance/${attencenceID}`,
           {
             employeeId: selectedEmployee,
             year: new Date().getFullYear(),

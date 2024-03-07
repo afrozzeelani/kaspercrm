@@ -13,7 +13,7 @@ const UpcomingBirthdays = () => {
 
   const loadEmployeeData = () => {
     axios
-      .get("http://localhost:4000/api/employee", {
+      .get(`https://backend-1-6gm4.onrender.com/api/employee`, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }
@@ -36,10 +36,10 @@ const UpcomingBirthdays = () => {
                 data["Account"] === 1
                   ? "Admin"
                   : data["Account"] === 2
-                  ? "HR"
-                  : data["Account"] === 3
-                  ? "Employee"
-                  : "",
+                    ? "HR"
+                    : data["Account"] === 3
+                      ? "Employee"
+                      : "",
               RoleName: data["role"][0] ? data["role"][0]["RoleName"] : "",
               FirstName: data["FirstName"],
               MiddleName: data["MiddleName"],

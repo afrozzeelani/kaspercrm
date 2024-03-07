@@ -34,7 +34,7 @@ const ManagerNewTask = () => {
   };
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/api/tasks");
+      const response = await axios.get(`https://backend-1-6gm4.onrender.com/api/tasks`);
       console.log(response.data);
       setTasks(response.data);
     } catch (error) {
@@ -66,7 +66,7 @@ const ManagerNewTask = () => {
       }
 
       // Update the task status to "Cancelled" in the database
-      await axios.put(`http://localhost:4000/api/tasks/${taskId}`, {
+      await axios.put(`https://backend-1-6gm4.onrender.com/api/tasks/${taskId}`, {
         status: "Pending",
         comment: AcceptTaskRemark
       });
@@ -93,7 +93,7 @@ const ManagerNewTask = () => {
         return;
       }
 
-      await axios.put(`http://localhost:4000/api/tasks/${taskId}`, {
+      await axios.put(`https://backend-1-6gm4.onrender.com/api/tasks/${taskId}`, {
         status: "Rejected",
         comment: RejectRemarks
       });

@@ -72,7 +72,7 @@ const SelfAttendance = () => {
     const handleFetchAttendance = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/api/attendance/${employeeId}`,
+          `https://backend-1-6gm4.onrender.com/api/attendance/${employeeId}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token") || ""}`

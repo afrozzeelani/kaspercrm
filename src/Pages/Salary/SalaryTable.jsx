@@ -27,7 +27,7 @@ const AdminSalaryTable = (props) => {
 
   const loadSalaryData = () => {
     axios
-      .get("http://localhost:4000/api/salary", {
+      .get(`https://backend-1-6gm4.onrender.com/api/salary`, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }
@@ -60,7 +60,7 @@ const AdminSalaryTable = (props) => {
     console.log(e);
     if (window.confirm("Are you sure to delete this record? ")) {
       axios
-        .delete(`http://localhost:4000/api/salary/${e}`, {
+        .delete(`https://backend-1-6gm4.onrender.com/api/salary/${e}`, {
           headers: {
             authorization: localStorage.getItem("token") || ""
           }

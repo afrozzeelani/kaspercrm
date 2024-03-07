@@ -22,7 +22,7 @@ const City = () => {
     };
 
     axios
-      .post("http://localhost:4000/api/city", body, {
+      .post(`https://backend-1-6gm4.onrender.com/api/city`, body, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }
@@ -68,7 +68,7 @@ const City = () => {
     };
 
     axios
-      .put(`http://localhost:4000/api/city/${info["_id"]}`, body, {
+      .put(`https://backend-1-6gm4.onrender.com/api/city/${info["_id"]}`, body, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }

@@ -127,7 +127,7 @@ const Employee = () => {
     formData.append("profile", event.target[14].files[0]);
 
     await axios
-      .post("http://localhost:4000/api/employee", formData, {
+      .post(`https://backend-1-6gm4.onrender.com/api/employee`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           authorization: localStorage.getItem("token") || ""
@@ -228,7 +228,7 @@ const Employee = () => {
     // formData.append("TerminateDate", newInfo.target[14].value);
 
     axios
-      .put(`http://localhost:4000/api/employee/${info["_id"]}`, formData, {
+      .put(`https://backend-1-6gm4.onrender.com/api/employee/${info["_id"]}`, formData, {
         headers: {
           authorization: localStorage.getItem("token") || "",
           "Content-Type": "multipart/form-data" // Set content type explicitly for FormData

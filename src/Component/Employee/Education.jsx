@@ -24,7 +24,7 @@ const Education = (props) => {
     };
 
     axios
-      .post(`http://localhost:4000/api/education/${props.data["_id"]}`, body, {
+      .post(`https://backend-1-6gm4.onrender.com/api/education/${props.data["_id"]}`, body, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }
@@ -66,7 +66,7 @@ const Education = (props) => {
     };
 
     axios
-      .put(`http://localhost:4000/api/education/${info["_id"]}`, body, {
+      .put(`https://backend-1-6gm4.onrender.com/api/education/${info["_id"]}`, body, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }
@@ -103,7 +103,7 @@ const Education = (props) => {
         <EducationForm
           onEducationSubmit={handleEducationSubmit}
           onFormClose={handleFormClose}
-          // onGenderChange={handleAddFormGenderChange}
+        // onGenderChange={handleAddFormGenderChange}
         />
       )}
     </>

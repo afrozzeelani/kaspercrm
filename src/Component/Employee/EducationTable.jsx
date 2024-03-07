@@ -238,7 +238,7 @@ const EducationTable = (props) => {
   useEffect(() => {
     const loadEducationData = () => {
       axios
-        .get(`http://localhost:4000/api/education/${props.data["_id"]}`, {
+        .get(`https://backend-1-6gm4.onrender.com/api/education/${props.data["_id"]}`, {
           headers: {
             authorization: localStorage.getItem("token") || ""
           }
@@ -271,7 +271,7 @@ const EducationTable = (props) => {
     console.log(e1, e2);
     if (window.confirm("Are you sure to delete this record? ")) {
       axios
-        .delete(`http://localhost:4000/api/education/${e1}/${e2}`, {
+        .delete(`https://backend-1-6gm4.onrender.com/api/education/${e1}/${e2}`, {
           headers: {
             authorization: localStorage.getItem("token") || ""
           }

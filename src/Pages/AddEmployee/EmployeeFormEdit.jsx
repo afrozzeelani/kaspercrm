@@ -39,7 +39,7 @@ const EmployeeFormEdit = (props) => {
 
   const loadRoleInfo = () => {
     axios
-      .get("http://localhost:4000/api/role", {
+      .get(`https://backend-1-6gm4.onrender.com/api/role`, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }
@@ -54,7 +54,7 @@ const EmployeeFormEdit = (props) => {
 
   const loadPositionInfo = () => {
     axios
-      .get("http://localhost:4000/api/position", {
+      .get(`https://backend-1-6gm4.onrender.com/api/position`, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }
@@ -69,7 +69,7 @@ const EmployeeFormEdit = (props) => {
 
   const loadDepartmentInfo = () => {
     axios
-      .get("http://localhost:4000/api/department", {
+      .get(`https://backend-1-6gm4.onrender.com/api/department`, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }
@@ -411,9 +411,9 @@ const EmployeeFormEdit = (props) => {
                 <Col sm={10} className="form-input">
                   <Form.Control
                     type="file"
-                    //  value={profile}
-                    //  onChange={(value) => onProfileDataChange(value)}
-                    // required
+                  //  value={profile}
+                  //  onChange={(value) => onProfileDataChange(value)}
+                  // required
                   />
                 </Col>
               </div>

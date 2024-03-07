@@ -25,8 +25,8 @@ const LeaveApplicationEmp = (props) => {
 
     axios
       .post(
-        "http://localhost:4000/api/leave-application-emp/" +
-          localStorage.getItem("_id"),
+        `https://backend-1-6gm4.onrender.com/api/leave-application-emp/` +
+        localStorage.getItem("_id"),
         body,
         {
           headers: {
@@ -80,7 +80,7 @@ const LeaveApplicationEmp = (props) => {
 
     axios
       .put(
-        "http://localhost:4000/api/leave-application-emp/" + info["_id"],
+        `https://backend-1-6gm4.onrender.com/api/leave-application-emp/` + info["_id"],
         body,
         {
           headers: {
@@ -98,7 +98,7 @@ const LeaveApplicationEmp = (props) => {
 
     setEditForm(false);
   };
-  const handleAddFormGenderChange = () => {};
+  const handleAddFormGenderChange = () => { };
 
   return (
     <React.Fragment>

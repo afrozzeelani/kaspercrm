@@ -21,17 +21,17 @@ class Company extends Component {
               editData={this.state.editData}
             />
           ) : (
-              <CompanyTable
-                onAddCompany={this.handleAddCompany}
-                onEditCompany={this.handleEditCompany}
-              />
-            )
-        ) : (
-            <CompanyForm
-              onCompanySubmit={this.handleCompanySubmit}
-              onFormClose={this.handleFormClose}
+            <CompanyTable
+              onAddCompany={this.handleAddCompany}
+              onEditCompany={this.handleEditCompany}
             />
-          )}
+          )
+        ) : (
+          <CompanyForm
+            onCompanySubmit={this.handleCompanySubmit}
+            onFormClose={this.handleFormClose}
+          />
+        )}
       </React.Fragment>
     );
   }
@@ -55,7 +55,7 @@ class Company extends Component {
       CINNo: event.target[13].value,
     };
     axios
-      .post("http://localhost:4000/api/company", body, {
+      .post(`https://backend-1-6gm4.onrender.com/api/company`, body, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }
@@ -109,7 +109,7 @@ class Company extends Component {
     console.log("update", body);
     axios
       .put(
-        "http://localhost:4000/api/company/" + info["_id"],
+        `https://backend-1-6gm4.onrender.com/api/company/` + info["_id"],
         body, {
         headers: {
           authorization: localStorage.getItem("token") || ""

@@ -153,7 +153,7 @@ const WorkExperience = (props) => {
 
     axios
       .post(
-        "http://localhost:4000/api/work-experience/" + props.data["_id"],
+        `https://backend-1-6gm4.onrender.com/api/work-experience/` + props.data["_id"],
         body,
         {
           headers: {
@@ -203,7 +203,7 @@ const WorkExperience = (props) => {
     };
     console.log("update", body);
     axios
-      .put("http://localhost:4000/api/work-experience/" + info["_id"], body, {
+      .put(`https://backend-1-6gm4.onrender.com/api/work-experience/` + info["_id"], body, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }
@@ -218,7 +218,7 @@ const WorkExperience = (props) => {
 
     setEditForm(false);
   };
-  const handleAddFormGenderChange = () => {};
+  const handleAddFormGenderChange = () => { };
 
   return (
     <React.Fragment>

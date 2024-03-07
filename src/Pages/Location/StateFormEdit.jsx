@@ -10,7 +10,7 @@ class StateForm extends Component {
   countryData = [];
   loadCountryInfo = () => {
     axios
-      .get("http://localhost:4000/api/country", {
+      .get(`https://backend-1-6gm4.onrender.com/api/country`, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }

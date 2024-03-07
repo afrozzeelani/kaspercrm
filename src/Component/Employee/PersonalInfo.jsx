@@ -135,7 +135,7 @@ const PersonalInfo = ({ data, back }) => {
     };
     console.log("update", body);
     axios
-      .put(`http://localhost:4000/api/personal-info/${info["_id"]}`, body, {
+      .put(`https://backend-1-6gm4.onrender.com/api/personal-info/${info["_id"]}`, body, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }

@@ -224,7 +224,7 @@ function Attendance(props) {
   useEffect(() => {
     const loadEmployeeData = async (email) => {
       await axios
-        .get("http://localhost:4000/api/employee", {
+        .get(`https://backend-1-6gm4.onrender.com/api/employee`, {
           headers: {
             authorization: localStorage.getItem("token") || ""
           }
@@ -248,8 +248,8 @@ function Attendance(props) {
     const loadPersonalInfoData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4000/api/personal-info/" +
-            localStorage.getItem("_id"),
+          `https://backend-1-6gm4.onrender.com/api/personal-info/` +
+          localStorage.getItem("_id"),
           {
             headers: {
               authorization: localStorage.getItem("token") || ""
@@ -299,7 +299,7 @@ function Attendance(props) {
   const getMessage = async (employeeID) => {
     try {
       const response = await axios.get(
-        `http://localhost:4000/api/attendance/${employeeID}`
+        `https://backend-1-6gm4.onrender.com/api/attendance/${employeeID}`
       );
       const lastEntry = response.data[response.data.length - 1];
 
@@ -368,14 +368,13 @@ function Attendance(props) {
       const currentSecond = currentDate.getSeconds();
 
       // Format the current time in 24-hour format
-      const currentTime24Hrs = `${currentHour < 10 ? "0" : ""}${currentHour}:${
-        currentMinute < 10 ? "0" : ""
-      }${currentMinute}:${currentSecond < 10 ? "0" : ""}${currentSecond}`;
+      const currentTime24Hrs = `${currentHour < 10 ? "0" : ""}${currentHour}:${currentMinute < 10 ? "0" : ""
+        }${currentMinute}:${currentSecond < 10 ? "0" : ""}${currentSecond}`;
 
       // Get the current time in milliseconds
       const currentTimeMs = currentDate.getTime();
 
-      await axios.post(`http://localhost:4000/api/attendance/${attencenceID}`, {
+      await axios.post(`https://backend-1-6gm4.onrender.com/api/attendance/${attencenceID}`, {
         employeeId: selectedEmployee,
         year: new Date().getFullYear(),
         month: new Date().getMonth() + 1,
@@ -440,14 +439,13 @@ function Attendance(props) {
       const currentSecond = currentDate.getSeconds();
 
       // Format the current time in 24-hour format
-      const currentTime24Hrs = `${currentHour < 10 ? "0" : ""}${currentHour}:${
-        currentMinute < 10 ? "0" : ""
-      }${currentMinute}:${currentSecond < 10 ? "0" : ""}${currentSecond}`;
+      const currentTime24Hrs = `${currentHour < 10 ? "0" : ""}${currentHour}:${currentMinute < 10 ? "0" : ""
+        }${currentMinute}:${currentSecond < 10 ? "0" : ""}${currentSecond}`;
 
       // Get the current time in milliseconds
       const currentTimeMs = currentDate.getTime();
 
-      await axios.post(`http://localhost:4000/api/attendance/${attencenceID}`, {
+      await axios.post(`https://backend-1-6gm4.onrender.com/api/attendance/${attencenceID}`, {
         employeeId: selectedEmployee,
         year: new Date().getFullYear(),
         month: new Date().getMonth() + 1,
@@ -520,7 +518,7 @@ function Attendance(props) {
         const currentTimeMs = Math.round(URcurrentTimeMs);
 
         await axios.post(
-          `http://localhost:4000/api/attendance/${attencenceID}`,
+          `https://backend-1-6gm4.onrender.com/api/attendance/${attencenceID}`,
           {
             employeeId: selectedEmployee,
             year: new Date().getFullYear(),
@@ -597,7 +595,7 @@ function Attendance(props) {
         const currentTimeMs = Math.round(URcurrentTimeMs);
 
         await axios.post(
-          `http://localhost:4000/api/attendance/${attencenceID}`,
+          `https://backend-1-6gm4.onrender.com/api/attendance/${attencenceID}`,
           {
             employeeId: selectedEmployee,
             year: new Date().getFullYear(),

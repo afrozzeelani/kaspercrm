@@ -25,7 +25,7 @@ class CityTable extends Component {
   // stateDataArray;
   loadCityData = () => {
     axios
-      .get("http://localhost:4000/api/city", {
+      .get(`https://backend-1-6gm4.onrender.com/api/city`, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }
@@ -62,7 +62,7 @@ class CityTable extends Component {
     // let body= "ID=" + e;
     if (window.confirm("Are you sure to delete this record ? ") == true) {
       axios
-        .delete("http://localhost:4000/api/city/" + e, {
+        .delete(`https://backend-1-6gm4.onrender.com/api/city/` + e, {
           headers: {
             authorization: localStorage.getItem("token") || ""
           }

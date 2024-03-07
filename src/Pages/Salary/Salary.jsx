@@ -26,7 +26,7 @@ const Salary = () => {
 
       axios
         .post(
-          "http://localhost:4000/api/salary/" + event.target[0].value,
+          `https://backend-1-6gm4.onrender.com/api/salary/` + event.target[0].value,
           body,
           {
             headers: {
@@ -87,7 +87,7 @@ const Salary = () => {
 
       axios
         .put(
-          "http://localhost:4000/api/salary/" + info["salary"][0]["_id"],
+          `https://backend-1-6gm4.onrender.com/api/salary/` + info["salary"][0]["_id"],
           body,
           {
             headers: {

@@ -38,7 +38,7 @@ const AttendanceDetails = () => {
 
   const fetchEmployees = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/api/employee", {
+      const response = await axios.get(`https://backend-1-6gm4.onrender.com/api/employee`, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }
@@ -76,7 +76,7 @@ const AttendanceDetails = () => {
     setIsButtonClicked(true);
     try {
       const response = await axios.get(
-        `http://localhost:4000/api/attendance/${employeeId}`,
+        `https://backend-1-6gm4.onrender.com/api/attendance/${employeeId}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token") || ""}`

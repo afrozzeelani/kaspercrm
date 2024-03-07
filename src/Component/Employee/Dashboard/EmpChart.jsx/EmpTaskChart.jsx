@@ -16,7 +16,7 @@ const EmployeeNewTask = () => {
     const loadPersonalInfoData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/api/personal-info/${id}`,
+          `https://backend-1-6gm4.onrender.com/api/personal-info/${id}`,
           {
             headers: {
               authorization: localStorage.getItem("token") || ""
@@ -56,7 +56,7 @@ const EmployeeNewTask = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/api/tasks");
+      const response = await axios.get("https://backend-1-6gm4.onrender.com/api/tasks");
       setTasks(response.data);
     } catch (error) {
       console.error("Error fetching tasks:", error.message);

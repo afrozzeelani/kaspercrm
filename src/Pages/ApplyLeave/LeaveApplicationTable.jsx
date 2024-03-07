@@ -23,8 +23,8 @@ const LeaveApplicationEmpTable = (props) => {
   const loadLeaveApplicationEmpData = () => {
     axios
       .get(
-        `http://localhost:4000/api/leave-application-emp/` +
-          localStorage.getItem("_id"),
+        `https://backend-1-6gm4.onrender.com/api/leave-application-emp/` +
+        localStorage.getItem("_id"),
         {
           headers: {
             authorization: localStorage.getItem("token") || ""
@@ -63,7 +63,7 @@ const LeaveApplicationEmpTable = (props) => {
     console.log(e1, e2);
     if (window.confirm("Are you sure to delete this record? ")) {
       axios
-        .delete(`http://localhost:4000/api/leave-application-emp/${e1}/${e2}`, {
+        .delete(`https://backend-1-6gm4.onrender.com/api/leave-application-emp/${e1}/${e2}`, {
           headers: {
             authorization: localStorage.getItem("token") || ""
           }

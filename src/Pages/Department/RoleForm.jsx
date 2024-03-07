@@ -10,7 +10,7 @@ class RoleForm extends Component {
   companyData = [];
   loadCompanyInfo = () => {
     axios
-      .get("http://localhost:4000/api/company", {
+      .get(`https://backend-1-6gm4.onrender.com/api/company`, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }

@@ -16,7 +16,7 @@ const TodaysAttendance = () => {
     const fetchAttendanceData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4000/api/todays-attendance"
+          `https://backend-1-6gm4.onrender.com/api/todays-attendance`
         );
         setAttendanceData(response.data);
       } catch (error) {
@@ -137,8 +137,8 @@ const TodaysAttendance = () => {
                 <td className="text-uppercase">
                   {user.attendance
                     ? user.attendance.logoutTime[
-                        user.attendance.logoutTime.length - 1
-                      ]
+                    user.attendance.logoutTime.length - 1
+                    ]
                     : "N/A"}
                 </td>
                 {/* <td>{user.attendance ? user.attendance.totalBrake : 'N/A'}</td> */}
@@ -152,8 +152,8 @@ const TodaysAttendance = () => {
                     user.attendance ? user.attendance.loginTimeMs[0] : null,
                     user.attendance
                       ? user.attendance.logoutTimeMs[
-                          user.attendance.logoutTimeMs.length - 1
-                        ]
+                      user.attendance.logoutTimeMs.length - 1
+                      ]
                       : null
                   )}
                 </td>
@@ -166,15 +166,14 @@ const TodaysAttendance = () => {
                 <td className="text-center">
                   <span
                     style={{ fontSize: ".8rem" }}
-                    className={`py-1 px-3 rounded-5 shadow-sm fw-bold ${
-                      mark === "Present"
+                    className={`py-1 px-3 rounded-5 shadow-sm fw-bold ${mark === "Present"
                         ? "bg-success text-white"
                         : mark === "Late"
-                        ? "bg-info text-white"
-                        : mark === "Half Day"
-                        ? "bg-warning text-white"
-                        : "bg-danger text-white"
-                    }`}
+                          ? "bg-info text-white"
+                          : mark === "Half Day"
+                            ? "bg-warning text-white"
+                            : "bg-danger text-white"
+                      }`}
                   >
                     {mark}
                   </span>

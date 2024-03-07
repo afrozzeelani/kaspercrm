@@ -8,7 +8,7 @@ const SalaryForm = (props) => {
   useEffect(() => {
     const loadEmployeeInfo = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/api/employee", {
+        const response = await axios.get(`https://backend-1-6gm4.onrender.com/api/employee`, {
           headers: {
             authorization: localStorage.getItem("token") || ""
           }

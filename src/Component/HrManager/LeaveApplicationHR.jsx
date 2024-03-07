@@ -23,7 +23,7 @@ const LeaveApplicationHR = (props) => {
     };
     axios
       .post(
-        "http://localhost:4000/api/leave-application-hr/" + props.data["_id"],
+        `https://backend-1-6gm4.onrender.com/api/leave-application-hr/` + props.data["_id"],
         body,
         {
           headers: {
@@ -73,7 +73,7 @@ const LeaveApplicationHR = (props) => {
     console.log("update", body);
     axios
       .put(
-        "http://localhost:4000/api/leave-application-hr/" + info["_id"],
+        `https://backend-1-6gm4.onrender.com/api/leave-application-hr/` + info["_id"],
         body,
         {
           headers: {

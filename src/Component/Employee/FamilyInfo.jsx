@@ -150,7 +150,7 @@ const FamilyInfo = (props) => {
 
     axios
       .post(
-        "http://localhost:4000/api/family-info/" + props.data["_id"],
+        `https://backend-1-6gm4.onrender.com/api/family-info/` + props.data["_id"],
         body,
         {
           headers: {
@@ -203,7 +203,7 @@ const FamilyInfo = (props) => {
     console.log("update", body);
 
     axios
-      .put("http://localhost:4000/api/family-info/" + info["_id"], body, {
+      .put(`https://backend-1-6gm4.onrender.com/api/family-info/` + info["_id"], body, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }
@@ -218,7 +218,7 @@ const FamilyInfo = (props) => {
 
     setEditForm(false);
   };
-  const handleAddFormGenderChange = () => {};
+  const handleAddFormGenderChange = () => { };
 
   return (
     <>

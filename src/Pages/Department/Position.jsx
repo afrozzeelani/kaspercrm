@@ -60,7 +60,7 @@ class Position extends Component {
     //  let body= "CompanyID=" + event.target[0].value + "&Position=" + event.target[1].value;
     //  let body= "debru";
     axios
-      .post("http://localhost:4000/api/position", body, {
+      .post(`https://backend-1-6gm4.onrender.com/api/position`, body, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }
@@ -106,7 +106,7 @@ class Position extends Component {
     };
     console.log("update", body);
     axios
-      .put("http://localhost:4000/api/position/" + info["_id"], body, {
+      .put(`https://backend-1-6gm4.onrender.com/api/position/` + info["_id"], body, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }

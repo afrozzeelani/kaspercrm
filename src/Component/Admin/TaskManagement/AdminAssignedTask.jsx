@@ -54,7 +54,7 @@ const AdminAssignedTask = () => {
     getPdf();
   }, []);
   const getPdf = async () => {
-    const result = await axios.get("http://localhost:4000/api/getTask");
+    const result = await axios.get(`https://backend-1-6gm4.onrender.com/api/getTask`);
     console.log(result.data.data);
     setAllImage(result.data.data);
   };
@@ -66,7 +66,7 @@ const AdminAssignedTask = () => {
       });
     console.log(require[0].pdf);
     window.open(
-      `http://localhost:4000/${require[0].pdf}`,
+      `https://backend-1-6gm4.onrender.com/${require[0].pdf}`,
       "_blank",
       "noreferrer"
     );
@@ -74,7 +74,7 @@ const AdminAssignedTask = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/api/tasks");
+      const response = await axios.get(`https://backend-1-6gm4.onrender.com/api/tasks`);
       setTasks(response.data);
 
       // Update the totalAssignedTasks state with the count of assigned tasks
@@ -113,7 +113,7 @@ const AdminAssignedTask = () => {
       }
 
       // Update the task status to "Cancelled" in the database
-      await axios.put(`http://localhost:4000/api/tasks/${taskId}`, {
+      await axios.put(`https://backend-1-6gm4.onrender.com/api/tasks/${taskId}`, {
         status: "Cancelled",
         comment: cancellationRemarks
       });
@@ -157,7 +157,7 @@ const AdminAssignedTask = () => {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`http://localhost:4000/api/tasks/${updatedTask.id}`, {
+      await axios.put(`https://backend-1-6gm4.onrender.com/api/tasks/${updatedTask.id}`, {
         Taskname: updatedTask.Taskname,
         description: updatedTask.description,
         startDate: updatedTask.startDate,

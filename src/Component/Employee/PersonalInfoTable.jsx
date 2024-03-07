@@ -26,7 +26,7 @@ const PersonalInfoTable = (props) => {
 
   const loadPersonalInfoData = () => {
     axios
-      .get(`http://localhost:4000/api/personal-info/${props.data["_id"]}`, {
+      .get(`https://backend-1-6gm4.onrender.com/api/personal-info/${props.data["_id"]}`, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }
@@ -62,12 +62,12 @@ const PersonalInfoTable = (props) => {
             data["Account"] === 1
               ? "Admin"
               : data["Account"] === 2
-              ? "HR"
-              : data["Account"] === 3
-              ? "Employee"
-              : data["Account"] === 4
-              ? "Manager"
-              : "",
+                ? "HR"
+                : data["Account"] === 3
+                  ? "Employee"
+                  : data["Account"] === 4
+                    ? "Manager"
+                    : "",
           PositionName: data["position"][0]
             ? data["position"][0]["PositionName"]
             : ""
@@ -88,7 +88,7 @@ const PersonalInfoTable = (props) => {
     console.log(e);
     if (window.confirm("Are you sure to delete this record? ")) {
       axios
-        .delete(`http://localhost:4000/api/personalInfo/${e}`, {
+        .delete(`https://backend-1-6gm4.onrender.com/api/personalInfo/${e}`, {
           headers: {
             authorization: localStorage.getItem("token") || ""
           }

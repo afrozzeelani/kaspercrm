@@ -216,7 +216,7 @@ const WorkExperienceTable = (props) => {
 
   const loadWorkExperienceData = () => {
     axios
-      .get("http://localhost:4000/api/work-experience/" + props.data["_id"], {
+      .get(`https://backend-1-6gm4.onrender.com/api/work-experience/` + props.data["_id"], {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }
@@ -249,7 +249,7 @@ const WorkExperienceTable = (props) => {
     console.log(e1, e2);
     if (window.confirm("Are you sure to delete this record? ") === true) {
       axios
-        .delete("http://localhost:4000/api/work-experience/" + e1 + "/" + e2, {
+        .delete(`https://backend-1-6gm4.onrender.com/api/work-experience/` + e1 + "/" + e2, {
           headers: {
             authorization: localStorage.getItem("token") || ""
           }

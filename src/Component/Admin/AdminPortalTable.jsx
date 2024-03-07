@@ -24,7 +24,7 @@ class AdminPortalTable extends Component {
 
   loadPortalData = () => {
     axios
-      .get("http://localhost:4000/api/admin/portal", {
+      .get(`https://backend-1-6gm4.onrender.com/api/admin/portal`, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }
@@ -61,7 +61,7 @@ class AdminPortalTable extends Component {
       ) == true
     ) {
       axios
-        .delete("http://localhost:4000/api/admin/portal/" + e, {
+        .delete(`https://backend-1-6gm4.onrender.com/api/admin/portal/` + e, {
           headers: {
             authorization: localStorage.getItem("token") || ""
           }

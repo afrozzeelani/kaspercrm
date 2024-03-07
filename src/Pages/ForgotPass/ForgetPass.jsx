@@ -55,7 +55,7 @@ const ForgetPass = () => {
   // verfy the email id
   const verfyEmail = async () => {
     await axios
-      .post("http://localhost:4000/api/verfy_email", data)
+      .post(`https://backend-1-6gm4.onrender.com/api/verfy_email`, data)
       .then((res) => {
         localStorage.setItem("id", res.data.user._id);
         SendOtp();
@@ -77,13 +77,13 @@ const ForgetPass = () => {
   const SendOtp = async () => {
     const id = localStorage.getItem("id");
     await axios
-      .post(`http://localhost:4000/api/send_otp/${id}`, data)
+      .post(`https://backend-1-6gm4.onrender.com/api/send_otp/${id}`, data)
       .then((res) => {
         let day = new Date();
         let secounds = day.getSeconds();
         setCountDown(res.data.time - secounds + 1);
       })
-      .catch((err) => {});
+      .catch((err) => { });
   };
 
   // verfy the otp
@@ -91,7 +91,7 @@ const ForgetPass = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `http://localhost:4000/api/verfy_otp`,
+        `https://backend-1-6gm4.onrender.com/api/verfy_otp`,
         data
       );
     } catch (error) {
@@ -117,7 +117,7 @@ const ForgetPass = () => {
     } else {
       const id = localStorage.getItem("id");
       await axios
-        .post(`http://localhost:4000/api/forgot_pass/${id}`, data)
+        .post(`https://backend-1-6gm4.onrender.com/api/forgot_pass/${id}`, data)
         .then((res) => {
           console.log(res);
           localStorage.removeItem("id");

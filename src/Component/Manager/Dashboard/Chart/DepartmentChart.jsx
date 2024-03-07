@@ -28,7 +28,7 @@ const DepartmentChart = () => {
 
   const loadEmployeeData = () => {
     axios
-      .get("http://localhost:4000/api/employee", {
+      .get(`https://backend-1-6gm4.onrender.com/api/employee`, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }

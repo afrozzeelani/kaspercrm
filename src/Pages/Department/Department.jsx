@@ -27,17 +27,17 @@ class Department extends Component {
               editData={this.state.editData}
             />
           ) : (
-              <DepartmentTable
-                onAddDepartment={this.handleAddDepartment}
-                onEditDepartment={this.handleEditDepartment}
-              />
-            )
-        ) : (
-            <DepartmentForm
-              onDepartmentSubmit={this.handleDepartmentSubmit}
-              onFormClose={this.handleFormClose}
+            <DepartmentTable
+              onAddDepartment={this.handleAddDepartment}
+              onEditDepartment={this.handleEditDepartment}
             />
-          )}
+          )
+        ) : (
+          <DepartmentForm
+            onDepartmentSubmit={this.handleDepartmentSubmit}
+            onFormClose={this.handleFormClose}
+          />
+        )}
 
         {/* <div>debru</div> */}
         {/* <Route path="/admin/Department/table" exact component={DepartmentTable} /> */}
@@ -61,7 +61,7 @@ class Department extends Component {
     //  let body= "CompanyID=" + event.target[0].value + "&Department=" + event.target[1].value;
     //  let body= "debru";
     axios
-      .post("http://localhost:4000/api/department", body, {
+      .post(`https://backend-1-6gm4.onrender.com/api/department`, body, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }
@@ -111,7 +111,7 @@ class Department extends Component {
     console.log("update", body);
     axios
       .put(
-        "http://localhost:4000/api/department/" + info["_id"],
+        `https://backend-1-6gm4.onrender.com/api/department/` + info["_id"],
         body, {
         headers: {
           authorization: localStorage.getItem("token") || ""

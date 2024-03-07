@@ -23,7 +23,7 @@ class AdminCompanyTable extends Component {
 
   loadCompanyData = () => {
     axios
-      .get("http://localhost:4000/api/company", {
+      .get(`https://backend-1-6gm4.onrender.com/api/company`, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }
@@ -69,7 +69,7 @@ class AdminCompanyTable extends Component {
     console.log(e);
     if (window.confirm("Are you sure to delete this record? ") == true) {
       axios
-        .delete("http://localhost:4000/api/company/" + e, {
+        .delete(`https://backend-1-6gm4.onrender.com/api/company/` + e, {
           headers: {
             authorization: localStorage.getItem("token") || ""
           }

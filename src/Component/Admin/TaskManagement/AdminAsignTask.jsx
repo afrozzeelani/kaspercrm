@@ -273,7 +273,7 @@ const TaskAssign = () => {
   const ManagerDataHandler = () => {
     if (newTask.department === "") return;
     axios
-      .get("http://localhost:4000/api/employee", {
+      .get(`https://backend-1-6gm4.onrender.com/api/employee`, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }
@@ -333,7 +333,7 @@ const TaskAssign = () => {
     // console.log();
     const id = localStorage.getItem("_id");
     axios
-      .post("http://localhost:4000/api/tasks", formData)
+      .post(`https://backend-1-6gm4.onrender.com/api/tasks`, formData)
       .then((res) => {
         console.log(res);
       })
@@ -345,7 +345,7 @@ const TaskAssign = () => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/api/tasks");
+        const response = await axios.get(`https://backend-1-6gm4.onrender.com/api/tasks`);
         // Handle the response data as needed (e.g., set it in the component state)
         console.log(response.data);
       } catch (error) {
@@ -359,7 +359,7 @@ const TaskAssign = () => {
 
   const loadDepartmentInfo = () => {
     axios
-      .get("http://localhost:4000/api/department", {
+      .get(`https://backend-1-6gm4.onrender.com/api/department`, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }

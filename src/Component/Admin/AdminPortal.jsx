@@ -70,7 +70,7 @@ class AdminPortal extends Component {
     //  let body= "CompanyID=" + event.target[0].value + "&Portal=" + event.target[1].value;
     //  let body= "debru";
     axios
-      .post("http://localhost:4000/api/admin/portal", body, {
+      .post(`https://backend-1-6gm4.onrender.com/api/admin/portal`, body, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }
@@ -132,7 +132,7 @@ class AdminPortal extends Component {
     };
     console.log("update", body);
     axios
-      .put("http://localhost:4000/api/admin/portal/" + info["ID"], body, {
+      .put(`https://backend-1-6gm4.onrender.com/api/admin/portal/` + info["ID"], body, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }

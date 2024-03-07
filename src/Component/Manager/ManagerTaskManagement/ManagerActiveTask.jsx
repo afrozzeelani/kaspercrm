@@ -691,7 +691,7 @@ const ManagerActiveTask = () => {
   const [taskDepartment, setTaskDepartment] = useState("");
   const loadEmployeeData = () => {
     axios
-      .get("http://localhost:4000/api/employee", {
+      .get(`https://backend-1-6gm4.onrender.com/api/employee`, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }
@@ -749,7 +749,7 @@ const ManagerActiveTask = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/api/tasks");
+      const response = await axios.get(`https://backend-1-6gm4.onrender.com/api/tasks`);
       // console.log(response.data)
       setTasks(response.data);
       setError(null);
@@ -792,7 +792,7 @@ const ManagerActiveTask = () => {
           };
 
           await axios.post(
-            `http://localhost:4000/api/tasks/${selectedTaskId}/employees`,
+            `https://backend-1-6gm4.onrender.com/api/tasks/${selectedTaskId}/employees`,
             {
               employees: [employeeData]
             }
@@ -815,7 +815,7 @@ const ManagerActiveTask = () => {
     }
   };
 
-  const askStatus = async (taskId) => {};
+  const askStatus = async (taskId) => { };
   const completeTask = async (taskId) => {
     try {
       setIsCompleting(true);
@@ -827,7 +827,7 @@ const ManagerActiveTask = () => {
         return;
       }
 
-      await axios.put(`http://localhost:4000/api/tasks/${taskId}`, {
+      await axios.put(`https://backend-1-6gm4.onrender.com/api/tasks/${taskId}`, {
         status: "Completed",
         comment: CompleteRemarks
       });
@@ -1116,8 +1116,8 @@ const ManagerActiveTask = () => {
                                   taskemp.emptaskStatus === "Completed"
                                     ? "rgba(25, 201, 84, 0.436)"
                                     : taskemp.emptaskStatus === "Rejected"
-                                    ? "rgba(214, 92, 44, 0.636)"
-                                    : "inherit"
+                                      ? "rgba(214, 92, 44, 0.636)"
+                                      : "inherit"
                               }}
                             >
                               {i + 1}
@@ -1128,8 +1128,8 @@ const ManagerActiveTask = () => {
                                   taskemp.emptaskStatus === "Completed"
                                     ? "rgba(25, 201, 84, 0.436)"
                                     : taskemp.emptaskStatus === "Rejected"
-                                    ? "rgba(214, 92, 44, 0.636)"
-                                    : "inherit"
+                                      ? "rgba(214, 92, 44, 0.636)"
+                                      : "inherit"
                               }}
                             >
                               {taskemp.empname}
@@ -1140,8 +1140,8 @@ const ManagerActiveTask = () => {
                                   taskemp.emptaskStatus === "Completed"
                                     ? "rgba(25, 201, 84, 0.436)"
                                     : taskemp.emptaskStatus === "Rejected"
-                                    ? "rgba(214, 92, 44, 0.636)"
-                                    : "inherit"
+                                      ? "rgba(214, 92, 44, 0.636)"
+                                      : "inherit"
                               }}
                             >
                               {taskemp.empemail}
@@ -1152,8 +1152,8 @@ const ManagerActiveTask = () => {
                                   taskemp.emptaskStatus === "Completed"
                                     ? "rgba(25, 201, 84, 0.436)"
                                     : taskemp.emptaskStatus === "Rejected"
-                                    ? "rgba(214, 92, 44, 0.636)"
-                                    : "inherit"
+                                      ? "rgba(214, 92, 44, 0.636)"
+                                      : "inherit"
                               }}
                             >
                               {taskemp.empdesignation}
@@ -1164,8 +1164,8 @@ const ManagerActiveTask = () => {
                                   taskemp.emptaskStatus === "Completed"
                                     ? "rgba(25, 201, 84, 0.436)"
                                     : taskemp.emptaskStatus === "Rejected"
-                                    ? "rgba(214, 92, 44, 0.636)"
-                                    : "inherit"
+                                      ? "rgba(214, 92, 44, 0.636)"
+                                      : "inherit"
                               }}
                             >
                               {taskemp.emptaskStatus}
@@ -1176,8 +1176,8 @@ const ManagerActiveTask = () => {
                                   taskemp.emptaskStatus === "Completed"
                                     ? "rgba(25, 201, 84, 0.436)"
                                     : taskemp.emptaskStatus === "Rejected"
-                                    ? "rgba(214, 92, 44, 0.636)"
-                                    : "inherit"
+                                      ? "rgba(214, 92, 44, 0.636)"
+                                      : "inherit"
                               }}
                             >
                               {taskemp.empTaskComment}

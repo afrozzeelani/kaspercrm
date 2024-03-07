@@ -45,7 +45,7 @@ const LeaveApplicationHRTable = (props) => {
 
   const loadLeaveApplicationHRData = () => {
     axios
-      .get("http://localhost:4000/api/leave-application-hr/", {
+      .get(`https://backend-1-6gm4.onrender.com/api/leave-application-hr/`, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }
@@ -69,8 +69,8 @@ const LeaveApplicationHRTable = (props) => {
               data["employee"] &&
               data["employee"][0] &&
               data["employee"][0]["FirstName"] +
-                " " +
-                data["employee"][0]["LastName"],
+              " " +
+              data["employee"][0]["LastName"],
             Leavetype: data["Leavetype"],
             FromDate: data["FromDate"].slice(0, 10),
             ToDate: data["ToDate"].slice(0, 10),
@@ -98,7 +98,7 @@ const LeaveApplicationHRTable = (props) => {
     if (window.confirm("Are you sure to delete this record? ") == true) {
       axios
         .delete(
-          "http://localhost:4000/api/leave-application-hr/" + e1 + "/" + e2,
+          `https://backend-1-6gm4.onrender.com/api/leave-application-hr/` + e1 + "/" + e2,
           {
             headers: {
               authorization: localStorage.getItem("token") || ""

@@ -50,7 +50,7 @@ class AdminProjectBidFormEdit extends Component {
   };
   loadPortalsInfo = () => {
     axios
-      .get("http://localhost:4000/api/admin/portal", {
+      .get(`https://backend-1-6gm4.onrender.com/api/admin/portal`, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }

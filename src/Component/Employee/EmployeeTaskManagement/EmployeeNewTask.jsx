@@ -18,7 +18,7 @@ const EmployeeNewTask = () => {
     const loadPersonalInfoData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4000/api/personal-info/" + id,
+          `https://backend-1-6gm4.onrender.com/api/personal-info/` + id,
           {
             headers: {
               authorization: localStorage.getItem("token") || ""
@@ -58,7 +58,7 @@ const EmployeeNewTask = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/api/tasks");
+      const response = await axios.get(`https://backend-1-6gm4.onrender.com/api/tasks`);
       setTasks(response.data);
     } catch (error) {
       console.error("Error fetching tasks:", error.message);
@@ -84,7 +84,7 @@ const EmployeeNewTask = () => {
       }
 
       await axios.put(
-        `http://localhost:4000/api/tasks/${taskId}/employees/${empEmail}`,
+        `https://backend-1-6gm4.onrender.com/api/tasks/${taskId}/employees/${empEmail}`,
         {
           emptaskStatus: "Accepted",
           empTaskComment: empRemarks
@@ -110,7 +110,7 @@ const EmployeeNewTask = () => {
       }
 
       await axios.put(
-        `http://localhost:4000/api/tasks/${taskId}/employees/${empEmail}`,
+        `https://backend-1-6gm4.onrender.com/api/tasks/${taskId}/employees/${empEmail}`,
         {
           emptaskStatus: "Rejected",
           empTaskComment: empRemarks
@@ -136,7 +136,7 @@ const EmployeeNewTask = () => {
       }
 
       await axios.put(
-        `http://localhost:4000/api/tasks/${taskId}/employees/${empEmail}`,
+        `https://backend-1-6gm4.onrender.com/api/tasks/${taskId}/employees/${empEmail}`,
         {
           emptaskStatus: "Completed",
           empTaskComment: empRemarks
@@ -161,7 +161,7 @@ const EmployeeNewTask = () => {
 
   return (
     <div>
-      <h1 className="fs-3 fw-bolder text-uppercase ">🌟New Task ({}) </h1>
+      <h1 className="fs-3 fw-bolder text-uppercase ">🌟New Task ({ }) </h1>
 
       {loading && (
         <div

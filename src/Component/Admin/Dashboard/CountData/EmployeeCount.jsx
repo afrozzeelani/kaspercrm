@@ -41,7 +41,7 @@ const AdminEmployeeTable = (props) => {
 
   const loadEmployeeData = () => {
     axios
-      .get("http://localhost:4000/api/employee", {
+      .get(`https://backend-1-6gm4.onrender.com/api/employee`, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }
@@ -64,12 +64,12 @@ const AdminEmployeeTable = (props) => {
                 data["Account"] === 1
                   ? "Admin"
                   : data["Account"] === 2
-                  ? "HR"
-                  : data["Account"] === 3
-                  ? "Employee"
-                  : data["Account"] === 4
-                  ? "Manager"
-                  : "",
+                    ? "HR"
+                    : data["Account"] === 3
+                      ? "Employee"
+                      : data["Account"] === 4
+                        ? "Manager"
+                        : "",
 
               RoleName: data["role"][0] ? data["role"][0]["RoleName"] : "",
               FirstName: data["FirstName"],
@@ -103,7 +103,7 @@ const AdminEmployeeTable = (props) => {
   const onEmployeeDelete = (e) => {
     if (window.confirm("Are you sure to delete this record? ")) {
       axios
-        .delete(`http://localhost:4000/api/employee/${e}`, {
+        .delete(`https://backend-1-6gm4.onrender.com/api/employee/${e}`, {
           headers: {
             authorization: localStorage.getItem("token") || ""
           }
